@@ -20,7 +20,6 @@ namespace MetasiteTask.Repositories
         public async Task InitializeDatabase()
         {
             await dbContext.Database.EnsureCreatedAsync();
-            dbContext.Operations.RemoveRange(dbContext.Operations.ToList());
         }
 
         public async Task GenerateDemoData()
